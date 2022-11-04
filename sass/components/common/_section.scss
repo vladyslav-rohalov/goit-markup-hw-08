@@ -1,0 +1,20 @@
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &:nth-child(2) {
+        padding-top: 0;
+        @media screen and (max-width: $tablets-max) {
+            display: none;
+        }
+    }
+
+    &:nth-child(3) {
+        background-color: $section-bg-color;
+    }
+
+    @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    }
+}

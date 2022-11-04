@@ -1,0 +1,74 @@
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.projects__item {
+    width: 100%;
+
+    @media screen and (min-width: $tablets) {
+        width: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: calc((100% - 60px) / 3);
+    }
+    
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+
+.projects__name {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+}
+
+.projects__text {
+    color: $secondary-text-color;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+}
+
+.projects__description {
+    padding: 20px 24px;
+    border-left: 1px solid $border-line-projects;
+    border-right: 1px solid $border-line-projects;
+    border-bottom: 1px solid $border-line-projects;
+
+    @media screen and (min-width: $tablets) and (max-width: $tablets-max) {
+        min-height: 146px;
+    }
+}
+
+.projects__thumb {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .projects__text-transform,
+    &:focus .projects__text-transform {
+        transform: translateY(-100%);
+    }
+}
+
+.projects__text-transform {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: $text-color-white;
+    background-color: $projects-bg-wrapper;
+    transform: translateY(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
