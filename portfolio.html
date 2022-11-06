@@ -20,7 +20,7 @@
           >
           <button
             type="button"
-            class="menu-btn"
+            class="menu-toggle js-open-menu"
             data-menu-button
             aria-expanded="false"
             aria-controls="menu-container"
@@ -30,27 +30,35 @@
               height="18.67px"
               aria-label="Перемикач мобільного меню"
             >
-              <use
-                class="menu-btn__icon-close"
-                href="./images/sprite.svg#mobile-close"
-              ></use>
-              <use
-                class="menu-btn__icon-open"
-                href="./images/sprite.svg#mobile-open"
-              ></use>
+              <use class="" href="./images/sprite.svg#mobile-open"></use>
             </svg>
           </button>
 
-          <div class="menu-container" id="menu-container" data-menu>
+          <div class="menu-container js-menu-container lock" id="mobile-menu">
+            <button
+              type="button"
+              class="menu-toggle js-close-menu"
+              data-menu-button
+              aria-expanded="false"
+              aria-controls="menu-container"
+            >
+              <svg
+                width="18.67px"
+                height="18.67px"
+                aria-label="Перемикач мобільного меню"
+              >
+                <use class="" href="./images/sprite.svg#mobile-close"></use>
+              </svg>
+            </button>
             <div class="navigation">
               <ul class="navigation__list">
                 <li class="navigation__item">
-                  <a class="navigation__link" href="index.html">Студія</a>
+                  <a class="navigation__link navigation__line" href="index.html"
+                    >Студія</a
+                  >
                 </li>
                 <li class="navigation__item">
-                  <a
-                    class="navigation__link navigation__line"
-                    href="portfolio.html"
+                  <a class="navigation__link" href="portfolio.html"
                     >Портфоліо</a
                   >
                 </li>
@@ -961,6 +969,12 @@
         </div>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/speaker-form.js"></script>

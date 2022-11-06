@@ -10,6 +10,10 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 60px;
+    @media screen and (min-width: $tablets) {
+        gap: 0px;
+    }
+    
     @media screen and (min-width: $desktop) {
         gap: 0px;
         justify-content: space-between;
@@ -21,12 +25,21 @@
     text-align: center;
     
     @media screen and (min-width: $tablets) {
-        width:100%;
+        display: flex;
+        flex-direction: column;
+        width:50%;
+        
+    }
+
+    @media screen and (min-width: $tablets) and (max-width: $tablets-max) {
+        &:not(:last-child) {
+            margin-bottom: 60px;
+        }
     }
 
     @media screen and (min-width: $desktop) {
         width: 25%;
-        text-align: left;
+        text-align: left;   
     }
 
     &:nth-child(3) {
